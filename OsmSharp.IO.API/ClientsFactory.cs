@@ -43,12 +43,6 @@ namespace OsmSharp.IO.API
         }
 
         /// <inheritdoc/>
-        public IAuthClient CreateOAuthClient(string consumerKey, string consumerSecret, string token, string tokenSecret)
-        {
-            return new OAuthClient(_httpClient, _logger, _baseAddress, consumerKey, consumerSecret, token, tokenSecret);
-        }
-        
-        /// <inheritdoc/>
         public IAuthClient CreateOAuth2Client(string token)
         {
             return new OAuth2Client(_httpClient, _logger, _baseAddress, token);
